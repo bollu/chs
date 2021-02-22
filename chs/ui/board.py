@@ -284,6 +284,7 @@ class Board(object):
 
   ### TODO maybe make get_piece_thin?
   def get_piece(self, letter):
+    return letter + ' '
     pieces = {
       'R': '♜ ',
       'N': '♞ ',
@@ -305,19 +306,19 @@ class Board(object):
     white_king_color = Colors.Backgrounds.RED if is_white_check else Colors.LIGHT
     pieces = {
       # White
-      'R': [Colors.LIGHT + '♜ ' + Colors.RESET],
-      'N': [Colors.LIGHT + '♞ ' + Colors.RESET],
-      'B': [Colors.LIGHT + '♗ ' + Colors.RESET],
-      'Q': [Colors.LIGHT + '♕ ' + Colors.RESET],
-      'K': [white_king_color + '♔ ' + Colors.RESET],
-      'P': [Colors.LIGHT + '♙ ' + Colors.RESET],
+      'R': [Colors.LIGHT + 'R ' + Colors.RESET],
+      'N': [Colors.LIGHT + 'N ' + Colors.RESET],
+      'B': [Colors.LIGHT + 'B ' + Colors.RESET],
+      'Q': [Colors.LIGHT + 'Q ' + Colors.RESET],
+      'K': [white_king_color + 'K ' + Colors.RESET],
+      'P': [Colors.LIGHT + 'P ' + Colors.RESET],
       # Black
-      'r': [Colors.DARK + '♜ ' + Colors.RESET],
-      'n': [Colors.DARK + '♞ ' + Colors.RESET],
-      'b': [Colors.DARK + '♝ ' + Colors.RESET],
-      'q': [Colors.DARK + '♛ ' + Colors.RESET],
-      'k': [black_king_color + '♚ ' + Colors.RESET],
-      'p': [Colors.DARK + '♙ ' + Colors.RESET],
+      'r': [Colors.DARK + 'r ' + Colors.RESET],
+      'n': [Colors.DARK + 'n ' + Colors.RESET],
+      'b': [Colors.DARK + 'b ' + Colors.RESET],
+      'q': [Colors.DARK + 'q ' + Colors.RESET],
+      'k': [black_king_color + 'k ' + Colors.RESET],
+      'p': [Colors.DARK + 'p ' + Colors.RESET],
       '1': ['  '],
       '2': ['  ', '  '],
       '3': ['  ', '  ', '  '],
